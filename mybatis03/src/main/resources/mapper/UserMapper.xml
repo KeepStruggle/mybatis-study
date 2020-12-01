@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.james.learning.mapper.UserMapper">
+
+    <!--结果集映射，解决属性名和数据库字段名不一致问题-->
+    <resultMap id="UserMap" type="User">
+        <!--column数据库中的字段，property实体类中的属性(可以只针对不一致的作显示映射)-->
+<!--        <result column="id" property="id"/>-->
+<!--        <result column="name" property="name"/>-->
+        <result column="pwd" property="password"/>
+    </resultMap>
+
+    <!--select查询语句-->
+    <select id="getUserList" resultMap="UserMap">
+        select * from user
+    </select>
+
+    <select id="getUserByLimit" parameterType="map" resultMap="UserMap">
+        select * from user limit #{startIndex},#{pageSize}
+    </select>
+
+    <select id="getUserByRowBounds" resultMap="UserMap">
+        select * from user
+    </select>
+
+
+</mapper>
