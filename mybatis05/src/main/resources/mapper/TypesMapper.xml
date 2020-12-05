@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.james.learning.mapper.TypesMapper">
+
+    <resultMap id="TypesHouseMap" type="Types">
+        <id property="id" column="id"/>
+        <collection property="houseList" ofType="House">
+            <result property="id" column="hid"/>
+        </collection>
+    </resultMap>
+
+    <select id="getTypesList" resultMap="TypesHouseMap">
+        select t.ID,t.`NAME`,h.id as hid,h.TITLE,h.DESCRIPTION,h.PRICE,h.PUBDATE,h.FLOORAGE,h.CONTACT from types t, house h where t.id = 1000 and t.id = h.TYPE_ID
+    </select>
+
+</mapper>
