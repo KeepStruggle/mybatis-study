@@ -23,6 +23,5 @@
 hs_err_pid*
 
 .idea/
-mybatis01/target/
-mybatis02/target/
+*/target/
 *.iml

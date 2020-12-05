@@ -41,4 +41,5 @@ public interface UserMapper {
  * 当运行时动态地把参数传给PreprareStatement时，
  * 即使参数里有敏感字符如 or '1=1'也数据库会作为一个参数一个字段的属性值来处理而不会作为一个SQL指令，
  * 如此，就起到了防止SQL注入的作用了！
+ *
  */

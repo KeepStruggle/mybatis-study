@@ -13,6 +13,7 @@
         <module>mybatis02</module>
         <module>mybatis03</module>
         <module>mybatis04</module>
+        <module>mybatis05</module>
     </modules>
 
     <dependencies>
