@@ -17,5 +17,5 @@ public class Types implements Serializable {
     private Integer id;
     private String name;
 
-    private List<House> houseList;
+    private List<House> houseList; //一种房屋类型对应多个房屋
 }
